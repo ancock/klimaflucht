@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Klimaflucht & Menschenrechte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="nav">
+  <a href="#hero">Start</a>
+  <a href="#biografie">Biografie</a>
+  <a href="#fakten">Fakten</a>
+  <a href="#recht">Recht</a>
+  <a href="#karte">Karte</a>
+  <a href="#eu">EU & Menschenrechte</a>
+</nav>
+
+<header id="hero" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1>Klimaflucht</h1>
+    <p>Wenn der Klimawandel Menschen zur Flucht zwingt</p>
+  </div>
+</header>
+
+<main>
+
+<section id="biografie" class="glass-card">
+  <h2>Eine Fluchtbiografie</h2>
+
+  <p id="storyText"></p>
+
+  <button id="nextStep">Nächster Abschnitt</button>
+</section>
+
+<section id="fakten" class="glass-card">
+  <h2>Fakten zur Klimamigration</h2>
+  <ul class="facts">
+    <li>🌍 Über 30 Millionen Menschen werden jedes Jahr durch Umweltkatastrophen vertrieben.</li>
+    <li>🌡️ Dürren, Überschwemmungen und steigende Meeresspiegel sind Hauptursachen.</li>
+    <li>🏠 Die meisten Klimaflüchtlinge bleiben innerhalb ihres Landes.</li>
+    <li>📈 Bis 2050 könnten über 200 Millionen Menschen klimabedingt migrieren.</li>
+  </ul>
+</section>
+
+<section id="recht" class="glass-card">
+  <h2>Klimamigrant oder Geflüchteter?</h2>
+
+  <div class="comparison">
+    <div>
+      <h3>Klimamigrant</h3>
+      <p>
+        Menschen, die wegen Umweltveränderungen ihre Heimat verlassen müssen,
+        sind rechtlich meist nicht als Flüchtlinge anerkannt.
+      </p>
+    </div>
+
+    <div>
+      <h3>Geflüchtete (Genfer Konvention)</h3>
+      <p>
+        Schutz gilt nur bei Verfolgung aufgrund von Religion, Herkunft,
+        politischer Meinung oder Zugehörigkeit zu einer Gruppe.
+      </p>
+    </div>
+  </div>
+
+  <p class="note">
+    ➜ Klimaflucht ist bisher kaum im internationalen Flüchtlingsrecht verankert.
+  </p>
+</section>
+
+<section id="karte" class="glass-card">
+  <h2>Regionen zunehmender Klimaflucht</h2>
+
+  <label>
+    Entwicklung:
+    <span id="mapYear">Heute</span>
+  </label>
+  <input type="range" min="0" max="1" step="1" value="0" id="mapSlider">
+
+  <div class="map">
+    <div class="region low">Europa</div>
+    <div class="region high">Subsahara-Afrika</div>
+    <div class="region high">Südasien</div>
+    <div class="region medium">Naher Osten</div>
+  </div>
+
+  <p id="mapText"></p>
+</section>
+
+<section id="eu" class="glass-card">
+  <h2>Klimaflucht & Menschenrechte in der EU</h2>
+  <p>
+    Die Europäische Union erkennt das Recht auf Asyl an. Klimaflüchtlinge fallen
+    jedoch häufig nicht unter die bestehenden Schutzregelungen.
+  </p>
+  <p>
+    Gleichzeitig sind EU-Staaten durch Menschenrechte verpflichtet,
+    Leben, Würde und Sicherheit zu schützen – auch im Kontext des Klimawandels.
+  </p>
+  <p>
+    Klimaflucht stellt damit eine zentrale Zukunftsfrage für Recht,
+    Solidarität und Verantwortung in Europa dar.
+  </p>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
