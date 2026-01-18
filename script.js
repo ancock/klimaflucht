@@ -1,13 +1,35 @@
-/* Smooth Scroll */
+/* =========================
+   SMOOTH SCROLL NAVIGATION
+========================= */
 document.querySelectorAll('.nav a').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
-    document.querySelector(link.getAttribute('href'))
-      .scrollIntoView({ behavior: "smooth" });
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Bei mobile Menü: schließen nach Klick
+    const navLinks = document.querySelector('.nav-links');
+    if (navLinks.classList.contains('show')) {
+      navLinks.classList.remove('show');
+    }
   });
 });
 
-/* Fluchtbiografie */
+/* =========================
+   MOBILE NAVIGATION TOGGLE
+========================= */
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+
+/* =========================
+   FLUCHTBIOGRAFIE
+========================= */
 const storySteps = [
   "Ich heiße Amir und bin 15 Jahre alt. Meine Familie lebte von der Landwirtschaft.",
   "Seit Jahren regnet es kaum noch. Die Felder verdorren, unser Brunnen ist leer.",
@@ -22,7 +44,7 @@ const nextStep = document.getElementById("nextStep");
 
 storyText.textContent = storySteps[0];
 
-nextStep.addEventListener("click", () => {
+nextStep.addEventListener('click', () => {
   step++;
   if (step < storySteps.length) {
     storyText.textContent = storySteps[step];
@@ -32,19 +54,21 @@ nextStep.addEventListener("click", () => {
   }
 });
 
-/* Karte */
+/* =========================
+   INTERAKTIVE KARTE
+========================= */
 const slider = document.getElementById("mapSlider");
 const mapYear = document.getElementById("mapYear");
 const mapText = document.getElementById("mapText");
 
-slider.addEventListener("input", () => {
+slider.addEventListener('input', () => {
   if (slider.value == 0) {
     mapYear.textContent = "Heute";
     mapText.textContent =
-      "Klimaflucht betrifft vor allem besonders verwundbare Regionen.";
+      "Klimaflucht betrifft vor allem besonders verwundbare Regionen. Menschenrechte wie Zugang zu Wasser, Nahrung und Sicherheit sind in Gefahr.";
   } else {
     mapYear.textContent = "2050";
     mapText.textContent =
-      "Ohne Klimaschutz nehmen klimabedingte Fluchtbewegungen stark zu – auch Richtung Europa.";
+      "Ohne Klimaschutz nehmen klimabedingte Fluchtbewegungen stark zu – auch Richtung Europa. Menschenrechte und Schutz für alle müssen gewährleistet werden.";
   }
 });
