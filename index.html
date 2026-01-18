@@ -1,113 +1,256 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Klimaflucht & Menschenrechte</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO & Accessibility -->
+  <meta name="description" content="Interaktive Website über Klimaflucht, Menschenrechte und die Rolle der EU. Erfahre, wie Klimawandel Migration und grundlegende Rechte beeinflusst.">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
+<!-- =========================
+     NAVIGATION
+========================= -->
 <nav class="nav">
-  <a href="#hero">Start</a>
-  <a href="#biografie">Biografie</a>
-  <a href="#fakten">Fakten</a>
-  <a href="#recht">Recht</a>
-  <a href="#karte">Karte</a>
-  <a href="#eu">EU & Menschenrechte</a>
+  <div class="nav-inner">
+    <span class="logo">Klimaflucht</span>
+
+    <button class="menu-toggle" aria-label="Menü öffnen">
+      ☰
+    </button>
+
+    <div class="nav-links">
+      <a href="#hero">Start</a>
+      <a href="#biografie">Biografie</a>
+      <a href="#fakten">Fakten</a>
+      <a href="#recht">Menschenrechte</a>
+      <a href="#karte">Karte</a>
+      <a href="#eu">EU</a>
+      <a href="#loesungen">Lösungen</a>
+    </div>
+  </div>
 </nav>
 
+<!-- =========================
+     HERO
+========================= -->
 <header id="hero" class="hero">
   <div class="hero-bg"></div>
+
   <div class="hero-content">
-    <h1>Klimaflucht</h1>
-    <p>Wenn der Klimawandel Menschen zur Flucht zwingt</p>
+    <h1>Klimaflucht & Menschenrechte</h1>
+    <p>
+      Wenn der Klimawandel nicht nur Lebensräume zerstört,  
+      sondern auch grundlegende Rechte wie Sicherheit, Würde und Schutz bedroht.
+    </p>
+    <a href="#biografie" class="cta-button">Mehr erfahren</a>
   </div>
 </header>
 
+<!-- =========================
+     MAIN CONTENT
+========================= -->
 <main>
 
-<section id="biografie" class="glass-card">
-  <h2>Eine Fluchtbiografie</h2>
+  <!-- =========================
+       BIOGRAFIE
+  ========================= -->
+  <section id="biografie" class="glass-card">
+    <h2>Eine persönliche Fluchtgeschichte</h2>
 
-  <p id="storyText"></p>
+    <p class="section-intro">
+      Klimaflucht ist keine abstrakte Statistik – sie betrifft echte Menschen,
+      Familien und Kinder. Diese Geschichte zeigt, wie Umweltveränderungen
+      grundlegende Menschenrechte beeinflussen.
+    </p>
 
-  <button id="nextStep">Nächster Abschnitt</button>
-</section>
+    <article class="story-box">
+      <p id="storyText"></p>
+    </article>
 
-<section id="fakten" class="glass-card">
-  <h2>Fakten zur Klimamigration</h2>
-  <ul class="facts">
-    <li>🌍 Über 30 Millionen Menschen werden jedes Jahr durch Umweltkatastrophen vertrieben.</li>
-    <li>🌡️ Dürren, Überschwemmungen und steigende Meeresspiegel sind Hauptursachen.</li>
-    <li>🏠 Die meisten Klimaflüchtlinge bleiben innerhalb ihres Landes.</li>
-    <li>📈 Bis 2050 könnten über 200 Millionen Menschen klimabedingt migrieren.</li>
-  </ul>
-</section>
+    <button id="nextStep" class="primary-button">
+      Nächster Abschnitt
+    </button>
+  </section>
 
-<section id="recht" class="glass-card">
-  <h2>Klimamigrant oder Geflüchteter?</h2>
+  <!-- =========================
+       FAKTEN
+  ========================= -->
+  <section id="fakten" class="glass-card">
+    <h2>Fakten zur Klimamigration</h2>
 
-  <div class="comparison">
-    <div>
-      <h3>Klimamigrant</h3>
-      <p>
-        Menschen, die wegen Umweltveränderungen ihre Heimat verlassen müssen,
-        sind rechtlich meist nicht als Flüchtlinge anerkannt.
-      </p>
+    <ul class="facts">
+      <li>
+        🌍 Jedes Jahr werden über <strong>30 Millionen Menschen</strong> durch Umweltkatastrophen vertrieben.
+      </li>
+      <li>
+        🌡️ Klimawandel bedroht grundlegende Menschenrechte wie
+        <strong>Recht auf Wohnen, Wasser, Gesundheit und Nahrung</strong>.
+      </li>
+      <li>
+        🏠 Die meisten Klimaflüchtlinge bleiben innerhalb ihres eigenen Landes,
+        oft ohne rechtlichen Schutz oder staatliche Unterstützung.
+      </li>
+      <li>
+        📈 Bis 2050 könnten weltweit über
+        <strong>200 Millionen Menschen</strong> klimabedingt zur Migration gezwungen sein.
+      </li>
+    </ul>
+  </section>
+
+  <!-- =========================
+       MENSCHENRECHTE
+  ========================= -->
+  <section id="recht" class="glass-card">
+    <h2>Klimaflucht & Menschenrechte</h2>
+
+    <p class="section-intro">
+      Der Klimawandel betrifft nicht nur die Umwelt, sondern auch zentrale
+      Menschenrechte, die in der Allgemeinen Erklärung der Menschenrechte
+      festgeschrieben sind.
+    </p>
+
+    <div class="comparison">
+      <article>
+        <h3>Klimamigrant:innen</h3>
+        <p>
+          Menschen, die ihre Heimat wegen Umweltzerstörung, Dürren oder
+          steigender Meeresspiegel verlassen müssen, haben oft
+          <strong>keinen offiziellen Flüchtlingsstatus</strong>.
+          Dadurch fehlen ihnen rechtlicher Schutz, Asylanspruch und soziale Absicherung.
+        </p>
+      </article>
+
+      <article>
+        <h3>Geflüchtete (Genfer Flüchtlingskonvention)</h3>
+        <p>
+          Schutz besteht bei Verfolgung aufgrund von
+          Religion, Herkunft, politischer Überzeugung oder
+          Zugehörigkeit zu einer bestimmten sozialen Gruppe.
+          Klimabedingte Flucht ist hier bisher nicht klar geregelt.
+        </p>
+      </article>
     </div>
 
-    <div>
-      <h3>Geflüchtete (Genfer Konvention)</h3>
-      <p>
-        Schutz gilt nur bei Verfolgung aufgrund von Religion, Herkunft,
-        politischer Meinung oder Zugehörigkeit zu einer Gruppe.
-      </p>
+    <p class="note">
+      ➜ Menschenrechtsorganisationen fordern, Klimaflucht als
+      <strong>menschenrechtliches Schutzthema</strong> international anzuerkennen.
+    </p>
+  </section>
+
+  <!-- =========================
+       KARTE
+  ========================= -->
+  <section id="karte" class="glass-card">
+    <h2>Regionen zunehmender Klimaflucht</h2>
+
+    <p class="section-intro">
+      Diese interaktive Darstellung zeigt, wie sich Klimaflucht
+      heute und in Zukunft weltweit entwickeln könnte.
+    </p>
+
+    <div class="slider-box">
+      <label for="mapSlider">
+        Entwicklung:
+        <span id="mapYear">Heute</span>
+      </label>
+
+      <input
+        type="range"
+        min="0"
+        max="1"
+        step="1"
+        value="0"
+        id="mapSlider"
+      />
     </div>
-  </div>
 
-  <p class="note">
-    ➜ Klimaflucht ist bisher kaum im internationalen Flüchtlingsrecht verankert.
-  </p>
-</section>
+    <div class="map">
+      <div class="region low">Europa</div>
+      <div class="region high">Subsahara-Afrika</div>
+      <div class="region high">Südasien</div>
+      <div class="region medium">Naher Osten</div>
+    </div>
 
-<section id="karte" class="glass-card">
-  <h2>Regionen zunehmender Klimaflucht</h2>
+    <p id="mapText" class="map-description"></p>
+  </section>
 
-  <label>
-    Entwicklung:
-    <span id="mapYear">Heute</span>
-  </label>
-  <input type="range" min="0" max="1" step="1" value="0" id="mapSlider">
+  <!-- =========================
+       EU
+  ========================= -->
+  <section id="eu" class="glass-card">
+    <h2>Klimaflucht & Menschenrechte in der EU</h2>
 
-  <div class="map">
-    <div class="region low">Europa</div>
-    <div class="region high">Subsahara-Afrika</div>
-    <div class="region high">Südasien</div>
-    <div class="region medium">Naher Osten</div>
-  </div>
+    <p>
+      Die Europäische Union erkennt das <strong>Recht auf Asyl</strong>
+      als grundlegendes Menschenrecht an. Klimaflüchtlinge fallen jedoch häufig
+      nicht unter die bestehenden rechtlichen Schutzmechanismen.
+    </p>
 
-  <p id="mapText"></p>
-</section>
+    <p>
+      Gleichzeitig sind EU-Staaten durch internationale Abkommen verpflichtet,
+      <strong>Menschenwürde, Leben und Sicherheit</strong> zu schützen –
+      auch im Zusammenhang mit den Folgen des Klimawandels.
+    </p>
 
-<section id="eu" class="glass-card">
-  <h2>Klimaflucht & Menschenrechte in der EU</h2>
-  <p>
-    Die Europäische Union erkennt das Recht auf Asyl an. Klimaflüchtlinge fallen
-    jedoch häufig nicht unter die bestehenden Schutzregelungen.
-  </p>
-  <p>
-    Gleichzeitig sind EU-Staaten durch Menschenrechte verpflichtet,
-    Leben, Würde und Sicherheit zu schützen – auch im Kontext des Klimawandels.
-  </p>
-  <p>
-    Klimaflucht stellt damit eine zentrale Zukunftsfrage für Recht,
-    Solidarität und Verantwortung in Europa dar.
-  </p>
-</section>
+    <p>
+      Klimaflucht ist damit eine der zentralen Zukunftsfragen für
+      <strong>Solidarität, Verantwortung und Menschenrechtspolitik</strong>
+      in Europa.
+    </p>
+  </section>
+
+  <!-- =========================
+       LÖSUNGEN
+  ========================= -->
+  <section id="loesungen" class="glass-card">
+    <h2>Was kann getan werden?</h2>
+
+    <div class="solutions-grid">
+      <article>
+        <h3>🌱 Klimaschutz stärken</h3>
+        <p>
+          Weniger CO₂-Ausstoß, erneuerbare Energien und nachhaltige
+          Lebensweisen helfen, zukünftige Klimaflucht zu verhindern.
+        </p>
+      </article>
+
+      <article>
+        <h3>⚖️ Rechte ausbauen</h3>
+        <p>
+          Internationale Gesetze müssen Klimaflüchtlinge als
+          schutzbedürftige Gruppe anerkennen.
+        </p>
+      </article>
+
+      <article>
+        <h3>🤝 Solidarität fördern</h3>
+        <p>
+          Reiche Länder können gefährdete Regionen finanziell und
+          technisch unterstützen, um Lebensgrundlagen zu sichern.
+        </p>
+      </article>
+    </div>
+  </section>
 
 </main>
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="footer">
+  <p>
+    Schulprojekt – Thema: Klimawandel, Migration & Menschenrechte  
+  </p>
+  <p>
+    Erstellt von dir mit Unterstützung durch KI
+  </p>
+</footer>
 
 <script src="script.js"></script>
 </body>
