@@ -1,33 +1,64 @@
+/* =========================
+   GLOBAL
+========================= */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 body {
   background: #0b132b;
   color: white;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
+/* =========================
+   NAVIGATION
+========================= */
 .nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0,0,0,0.6);
-  padding: 10px;
-  text-align: center;
-  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  z-index: 100;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .nav a {
   color: white;
-  margin: 0 15px;
+  margin: 0 12px;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-/* Hero */
+.nav a:hover {
+  color: #2b7fff;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO
+========================= */
 .hero {
   height: 100vh;
   position: relative;
@@ -44,55 +75,94 @@ body {
   background-size: cover;
   background-position: center;
   filter: brightness(0.4);
+  z-index: 0;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 3rem;
+  margin-bottom: 15px;
 }
 
 .hero p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
 }
 
-/* Content */
-main {
-  padding: 100px 20px;
-}
-
-.glass-card {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-}
-
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
+.cta-button {
+  padding: 12px 25px;
   background: #2b7fff;
   border: none;
   border-radius: 8px;
   color: white;
+  font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #1a5fcc;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+main {
+  padding: 100px 20px 50px;
+}
+
+/* Glass-Card */
+.glass-card {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+button.primary-button {
+  margin-top: 20px;
+  padding: 12px 22px;
+  background: #2b7fff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button.primary-button:hover {
+  background: #1a5fcc;
 }
 
 /* Fakten */
 .facts li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  line-height: 1.5;
 }
 
 /* Vergleich */
 .comparison {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.comparison article {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
 }
 
 .note {
@@ -103,7 +173,7 @@ button {
 /* Karte */
 .map {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 15px;
   margin: 20px 0;
 }
@@ -112,8 +182,93 @@ button {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  font-weight: bold;
 }
 
-.low { background: rgba(0,150,255,0.3); }
-.medium { background: rgba(255,165,0,0.4); }
-.high { background: rgba(255,0,0,0.4); }
+.low { background: rgba(0, 150, 255, 0.3); }
+.medium { background: rgba(255, 165, 0, 0.4); }
+.high { background: rgba(255, 0, 0, 0.4); }
+
+.map-description {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+/* Lösungen Grid */
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.solutions-grid article {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.solutions-grid article:hover {
+  transform: translateY(-5px);
+  background: rgba(43, 127, 255, 0.2);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 0.9rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .glass-card {
+    padding: 20px;
+  }
+}
